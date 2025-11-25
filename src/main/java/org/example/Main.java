@@ -1,17 +1,42 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+public class Main {
+
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(() -> {
+            // ----- Create rooms and readings -----
+
+            List<SensorReading> sensors = new ArrayList<>();
+            Sensor s1 = new Sensor("NorthTemp");
+            s1.addReading(new TemperatureReading("Temperature Sensor", "North ward", 23.8,25.7);
+            Sensor s2 = new Sensor("CentralTemp");
+            s2.addReading(new TemperatureReading("Temperature Sensor", "Central ward", 23.8,25.7);
+            Sensor s3 = new Sensor("SouthTemp");
+            s3.addReading(new TemperatureReading("Temperature Sensor", "South ward", 23.8,25.7);
+            Sensor s4 = new Sensor("Humidity Sensor");
+            s4.addReading(new HumidityReading()"Humidity Sensor");
+            Sensor s5 = new Sensor("Air pollution");
+            s4.addReading(new AirpollutionReading()"Air pollution Sensor");
+
+
+
+            JFrame frame;
+
+            // ----- Build GUI -----
+
+            JFrame frame = new JFrame("Sensor Monitoring");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(900, 600);
+            frame.setLayout(new BorderLayout());
+
+            frame.add(BorderLayout.CENTER);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        });
     }
 }
