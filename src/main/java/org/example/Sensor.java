@@ -24,3 +24,5 @@ public class Sensor {
     public ArrayList<SensorReading> getReadings() {
         return readings;
     }
+
+}

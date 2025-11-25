@@ -25,3 +25,4 @@ public class TemperatureReading extends SensorReading {
     public boolean isHeatingON() {
     return heatingON;
     }
+}

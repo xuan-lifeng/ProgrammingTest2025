@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(() -> {
-            // ----- Create rooms and readings -----
+            //Create sensors and readings
 
             List<SensorReading> sensors = new ArrayList<>();
             Sensor s1 = new Sensor("NorthTemp");
@@ -27,7 +27,7 @@ public class Main {
 
             JFrame frame;
 
-            // ----- Build GUI -----
+            //Build GUI
 
             JFrame frame = new JFrame("Sensor Monitoring");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
